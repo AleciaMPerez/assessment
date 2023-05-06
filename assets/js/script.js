@@ -1,0 +1,47 @@
+// countdown timer 80 secs//
+
+var timerEl = document.getElementById('count');
+
+function countdown() {
+  var timeLeft = 80;
+
+  var timeInterval = setInterval(function () {
+
+    timerEl.textContent = timeLeft + " seconds left.";
+    timeLeft--; 
+
+    if (timeLeft < 0) {
+      clearInterval(timeInterval)
+      timerEl.textContent = " "
+    }
+  }, 1000);
+}
+
+function displayCount() {
+    var wordCount = 0;
+  
+    var msgInterval = setInterval(function () {
+      if (words[wordCount] === undefined) {
+        clearInterval(msgInterval);
+      } else {
+        mainEl.textContent = words[wordCount];
+        wordCount++;
+      }
+    }, 1000);
+  }
+  
+  countdown();
+  
+// event listener for start button//
+var count = 0;
+var startEl = document.querySelector("#start-timer")
+var countEl = document.querySelector("#count");
+
+function setCounterText() {
+  countEl.textContent = count;
+}
+
+startEl.addEventListener("click", function() {
+  count--;
+  setCounterText()
+});
