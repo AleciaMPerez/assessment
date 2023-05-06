@@ -16,20 +16,6 @@ function countdown() {
     }
   }, 1000);
 }
-
-function displayCount() {
-    var wordCount = 0;
-  
-    var msgInterval = setInterval(function () {
-      if (words[wordCount] === undefined) {
-        clearInterval(msgInterval);
-      } else {
-        mainEl.textContent = words[wordCount];
-        wordCount++;
-      }
-    }, 1000);
-  }
-  
   countdown();
   
 // event listener for start button//
