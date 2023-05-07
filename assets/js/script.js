@@ -32,5 +32,4 @@ startEl.addEventListener("click", function() {
   setCounterText()
 });
 
-// prompt questions -- My questions aren't appearing on the screen//
 
