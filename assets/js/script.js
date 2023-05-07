@@ -1,6 +1,6 @@
-// countdown timer 80 secs//
+// countdown timer 80 secs -- Timer is automatically starting instead of starting when I select the start button//
 
-var timerEl = document.getElementById('count');
+var timerEl = document.getElementById("count");
 
 function countdown() {
   var timeLeft = 80;
@@ -18,7 +18,7 @@ function countdown() {
 }
   countdown();
   
-// event listener for start button//
+// event listener for start button -- timer is decrementing in number instead of starting the timer//
 var count = 0;
 var startEl = document.querySelector("#start-timer")
 var countEl = document.querySelector("#count");
@@ -31,3 +31,6 @@ startEl.addEventListener("click", function() {
   count--;
   setCounterText()
 });
+
+// prompt questions -- My questions aren't appearing on the screen//
+
