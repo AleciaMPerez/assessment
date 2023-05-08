@@ -16,20 +16,68 @@ function countdown() {
     }
   }, 1000);
 }
-  countdown();
   
 // event listener for start button -- timer is decrementing in number instead of starting the timer//
 var count = 0;
-var startEl = document.querySelector("#start-timer")
+var startEl = document.querySelector("#start-timer");
 var countEl = document.querySelector("#count");
+var buttonList = document.querySelector("#buttons")
 
 function setCounterText() {
   countEl.textContent = count;
 }
 
 startEl.addEventListener("click", function() {
-  count--;
-  setCounterText()
+  countdown();
+  loadQuestion();
 });
+//question display
+function loadQuestion () {
+    var displayQuestion = document.querySelector("#questionOne")
+    var i=0
 
+    
 
+    // pulls the question
+    displayQuestion.innerText= questions[i].question;
+    // creates the answer button
+    questions[i].answers.forEach(answer => {
+        var button = document.createElement("button")
+        button.innerText= answer.text
+        // makes buttons appear
+    buttonList.appendChild(button)
+    })
+
+}
+
+//questions
+var questions = [
+    {
+        question: "Question One: 2+2?",
+        answers: [
+            {text: "4", correct:true},
+            {text: "22", correct: false},
+        ]
+    },
+    {
+        question: "2+3?",
+        answers: [
+            {text: "5", correct: true},
+            {text: "23", correct: false},
+        ]
+    },
+    {
+        question: "2+4",
+        answers: [
+            {text: "6", correct: true},
+            {text: "24", correct: false}
+        ]
+    }
+    {
+        question: "2+5",
+        answers: [
+            {text: "7", correct: true},
+            {text: "25", correct: false}
+        ]
+    }
+]
