@@ -1,20 +1,17 @@
-
-
-
-
-
 // countdown timer 80 secs
 
 var timerEl = document.getElementById("count");
 
+
+timerEl.addEventListener ("click"), function() {
+    countdown()
+}
+
 function countdown() {
   var timeLeft = 80;
-
   var timeInterval = setInterval(function () {
-
     timerEl.textContent = timeLeft + " seconds left.";
     timeLeft--; 
-
     if (timeLeft < 0) {
       clearInterval(timeInterval)
       timerEl.textContent = " "
@@ -25,28 +22,6 @@ function countdown() {
 
 
 
-// updated code
-
-var startButton = document.getElementById ("startButton")
-var questionContainerElement = document.getElementById("question-container")
-
-startButton.addEventListener("click", startGame);
-
-function startGame() {
-startButton.classList.add("hide")
-questionContainerElement.classList.remove("hide")
-setNextQuestion()
-}
-
-function setNextQuestion() {
-
-
-}
-
-function selectAnswer() {
-
-
-}
 
 //questions
 var questions = [
