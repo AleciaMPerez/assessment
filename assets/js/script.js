@@ -1,12 +1,10 @@
+var count = 0
+var startEl = document.querySelector(".start-btn")
+var countEl = document.querySelector(".count")
+var buttonList = document.querySelector("#buttons")
+
+
 // countdown timer 80 secs
-
-var timerEl = document.getElementById("count");
-
-
-timerEl.addEventListener ("click"), function() {
-    countdown()
-}
-
 function countdown() {
   var timeLeft = 80;
   var timeInterval = setInterval(function () {
@@ -18,8 +16,32 @@ function countdown() {
     }
   }, 1000);
 }
-  
 
+// Questions to load along with answer buttons
+
+// Displays question
+function loadQuestion () {
+    var displayQuestion = document.querySelector("#questionOne")
+    var i=0
+    // Pulls the question
+    displayQuestion.innerText = questions[i].question;
+    // Creates the Answer buttons
+    questions[i].answers.forEach(answer => {
+        var button = document.createElement("button")
+        button.innerText = answer.text
+        // Makes Answer buttons appear
+        buttonList.appendChild(button)
+    })
+}
+
+
+
+
+// when start-btn is clicked...
+startEl.addEventListener("click"), function() {
+    countdown()
+    loadQuestion()
+}
 
 
 
