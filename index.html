@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -13,12 +13,13 @@
       For every answer you get right, you will receive 1 point. For every answer
       you get wrong, you will lose 10 seconds.
     </p>
-    <h4>Current count: <span id="count">80</span></h4>
-    <button id="start-timer">Start</button>
+    <h4>Current count: <span class="count">80</span></h4>
+    <button class="start-Btn">Start</button>
     <div class="scoreBoard">Score Board</div>
     <div class="scoreBoardScore">0</div>
 
     <!--Question template-->
+      <div class="questions">
     <div id="questionOne"></div>
     <div id="buttons"></div>
 
@@ -30,7 +31,7 @@
 
     <div id ="questionFour"></div>
     <div id ="buttons"></div>
-
+      </div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -1,4 +1,9 @@
-// countdown timer 80 secs -- Timer is automatically starting instead of starting when I select the start button//
+
+
+
+
+
+// countdown timer 80 secs
 
 var timerEl = document.getElementById("count");
 
@@ -17,36 +22,29 @@ function countdown() {
   }, 1000);
 }
   
-// event listener for start button -- timer is decrementing in number instead of starting the timer//
-var count = 0;
-var startEl = document.querySelector("#start-timer");
-var countEl = document.querySelector("#count");
-var buttonList = document.querySelector("#buttons")
 
-function setCounterText() {
-  countEl.textContent = count;
+
+
+// updated code
+
+var startButton = document.getElementById ("startButton")
+var questionContainerElement = document.getElementById("question-container")
+
+startButton.addEventListener("click", startGame);
+
+function startGame() {
+startButton.classList.add("hide")
+questionContainerElement.classList.remove("hide")
+setNextQuestion()
 }
 
-startEl.addEventListener("click", function() {
-  countdown();
-  loadQuestion();
-});
-//question display
-function loadQuestion () {
-    var displayQuestion = document.querySelector("#questionOne")
-    var i=0
+function setNextQuestion() {
 
-    
 
-    // pulls the question
-    displayQuestion.innerText= questions[i].question;
-    // creates the answer button
-    questions[i].answers.forEach(answer => {
-        var button = document.createElement("button")
-        button.innerText= answer.text
-        // makes buttons appear
-    buttonList.appendChild(button)
-    })
+}
+
+function selectAnswer() {
+
 
 }
 
@@ -72,7 +70,7 @@ var questions = [
             {text: "6", correct: true},
             {text: "24", correct: false}
         ]
-    }
+    },
     {
         question: "2+5",
         answers: [
