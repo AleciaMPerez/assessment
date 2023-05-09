@@ -1,5 +1,5 @@
 var count = 0
-var startEl = document.querySelector(".start-btn")
+var startEl = document.querySelector(".start-Btn")
 var countEl = document.querySelector(".count")
 var buttonList = document.querySelector("#buttons")
 
@@ -8,7 +8,7 @@ var buttonList = document.querySelector("#buttons")
 function countdown() {
   var timeLeft = 80;
   var timeInterval = setInterval(function () {
-    timerEl.textContent = timeLeft + " seconds left.";
+    countEl.textContent = timeLeft + " seconds left.";
     timeLeft--; 
     if (timeLeft < 0) {
       clearInterval(timeInterval)
@@ -38,10 +38,10 @@ function loadQuestion () {
 
 
 // when start-btn is clicked...
-startEl.addEventListener("click"), function() {
+startEl.addEventListener("click", function() {
     countdown()
     loadQuestion()
-}
+});
 
 
 
