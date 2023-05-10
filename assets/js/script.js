@@ -12,7 +12,7 @@ function countdown() {
     timeLeft--; 
     if (timeLeft < 0) {
       clearInterval(timeInterval)
-      timerEl.textContent = " "
+      countEl.textContent = " "
     }
   }, 1000);
 }
@@ -21,7 +21,7 @@ function countdown() {
 
 // Displays question
 function loadQuestionOne () {
-    var displayQuestion = document.querySelector("#questionOne")
+    var displayQuestion = document.querySelector("#question")
     var i=0
     // Pulls the question
     displayQuestion.innerText = questions[i].question;
@@ -37,9 +37,12 @@ function loadQuestionOne () {
 // Checks answers and allows for the reduction of time and addition of points
 function questionCheck(event){
     let buttonEl = event.target;
-    if (buttonEl.value !== questions[currentIndex].correct){
-    }
+    if (buttonEl.value == questions[currentIndex].correct){
+        console.log("correct")
+    } else (buttonEl.value !== questions[currentIndex].correct)  
+        console.log ("wrong")
 }
+
 
 
 // when start-btn is clicked...
@@ -48,7 +51,10 @@ startEl.addEventListener("click", function() {
     loadQuestionOne()
 });
 
-
+// when an answer button is clicked
+buttonList.addEventListener("click", function(){
+questionCheck()
+})
 
 
 //questions
