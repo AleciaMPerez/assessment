@@ -34,8 +34,12 @@ function loadQuestionOne () {
     })
 }
 
-
-
+// Checks answers and allows for the reduction of time and addition of points
+function questionCheck(event){
+    let buttonEl = event.target;
+    if (buttonEl.value !== questions[currentIndex].correct){
+    }
+}
 
 
 // when start-btn is clicked...
