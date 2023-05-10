@@ -2,7 +2,6 @@ var count = 0
 var startEl = document.querySelector(".start-Btn")
 var countEl = document.querySelector(".count")
 var buttonList = document.querySelector("#buttons")
-var questionContainerEl = document.querySelector ("questionContainer")
 
 
 // countdown timer 80 secs
@@ -21,7 +20,7 @@ function countdown() {
 // Questions to load along with answer buttons
 
 // Displays question
-function loadQuestion () {
+function loadQuestionOne () {
     var displayQuestion = document.querySelector("#questionOne")
     var i=0
     // Pulls the question
@@ -37,10 +36,12 @@ function loadQuestion () {
 
 
 
+
+
 // when start-btn is clicked...
 startEl.addEventListener("click", function() {
     countdown()
-    loadQuestion()
+    loadQuestionOne()
 });
 
 
