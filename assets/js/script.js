@@ -36,7 +36,7 @@ function loadQuestionOne () {
 
 // Checks answers and allows for the reduction of time and addition of points
 function questionCheck(event){
-    let buttonEl = event.target;
+var buttonEl = event.target;
     if (buttonEl.value == questions[currentIndex].correct){
         console.log("correct")
     } else (buttonEl.value !== questions[currentIndex].correct)  
@@ -52,9 +52,7 @@ startEl.addEventListener("click", function() {
 });
 
 // when an answer button is clicked
-buttonList.addEventListener("click", function(){
-questionCheck()
-})
+buttonList.addEventListener("click", questionCheck)
 
 
 //questions
