@@ -37,10 +37,11 @@ function loadQuestionOne () {
 // Checks answers and allows for the reduction of time and addition of points
 function questionCheck(event){
 var buttonEl = event.target;
-    if (buttonEl.value == questions[currentIndex].correct){
-        console.log(questions[currentIndext])
-        console.log(buttonEl.value)
-    } else (buttonEl.value !== questions[currentIndex].correct)  
+        console.log(questions[currentIndex])
+        console.log(buttonEl.textContent)
+    if (buttonEl.textContent == questions[currentIndex].answers.correct){
+        console.log("correct")
+    } else (buttonEl.textContent !== questions[currentIndex].correct)  
         console.log ("wrong")
 }
 
@@ -61,29 +62,33 @@ var questions = [
     {
         question: "Question One: 2+2?",
         answers: [
-            {text: "4", correct: true},
-            {text: "22", correct: false},
-        ]
+            {text: "4"},
+            {text: "22"},
+        ],
+        correct: "4"
     },
     {
         question: "2+3?",
         answers: [
-            {text: "5", correct: true},
-            {text: "23", correct: false},
-        ]
+            {text: "5"},
+            {text: "23"},
+        ],
+        correct: "5"
     },
     {
         question: "2+4",
         answers: [
-            {text: "6", correct: true},
-            {text: "24", correct: false}
-        ]
+            {text: "6"},
+            {text: "24"}
+        ],
+        correct: "6"
     },
     {
         question: "2+5",
         answers: [
-            {text: "7", correct: true},
-            {text: "25", correct: false}
-        ]
+            {text: "7"},
+            {text: "25"}
+        ],
+        correct: "7"
     }
 ]
