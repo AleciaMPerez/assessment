@@ -38,7 +38,8 @@ function loadQuestionOne () {
 function questionCheck(event){
 var buttonEl = event.target;
     if (buttonEl.value == questions[currentIndex].correct){
-        console.log("correct")
+        console.log(questions[currentIndext])
+        console.log(buttonEl.value)
     } else (buttonEl.value !== questions[currentIndex].correct)  
         console.log ("wrong")
 }
@@ -60,7 +61,7 @@ var questions = [
     {
         question: "Question One: 2+2?",
         answers: [
-            {text: "4", correct:true},
+            {text: "4", correct: true},
             {text: "22", correct: false},
         ]
     },
