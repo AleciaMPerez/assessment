@@ -2,7 +2,7 @@ var count = 0
 var startEl = document.querySelector(".start-Btn")
 var countEl = document.querySelector(".count")
 var buttonList = document.querySelector("#buttons")
-
+var currentIndex = 0
 
 // countdown timer 80 secs
 function countdown() {
