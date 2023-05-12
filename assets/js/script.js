@@ -3,7 +3,7 @@ var startEl = document.querySelector(".start-Btn")
 var countEl = document.querySelector(".count")
 var buttonList = document.querySelector("#buttons")
 var currentIndex = 0
-var score = document.querySelector(".scoreBoardTally")
+var score = 0
 
 // countdown timer 80 secs
 function countdown() {
@@ -40,13 +40,17 @@ function questionCheck(event){
 var buttonEl = event.target;
         console.log(questions[currentIndex])
         console.log(buttonEl.textContent)
+        // when the answer is selected
     if (buttonEl.textContent == questions[currentIndex].correct){
-        score + 5;
+        // add one point
+        score++;
         console.log("correct");
-    } else (buttonEl.textContent !== questions[currentIndex].correct)  
+        // when the incorrect answer is selected
+    } else   {
+        // reduce the count by 10
         count - 10
         console.log ("wrong")
-
+    }
 }
 
 
